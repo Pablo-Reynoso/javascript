@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p>JavaScript can show hidden HTML elements.</p>
+
+<p id="demo" style="display:none">Hello JavaScript!</p>
+
+<button type="button" onclick="document.getElementById('demo').style.display='block'">Click Me!</button>
+
+<script>
+    /* For con estamentos*/ 
+
+console.log("Aqui comienza el for");
+var sumaFor = 0;
+
+	for (var i = 1; i <= 12; i++) {
+		console.log("Esta es la variable i: ",i);
+        sumaFor = sumaFor + 5;
+        console.log("Esta es la suma parcial del for: ",sumaFor);
+	}
+console.log("Esta es la variable i fuera del for: ",i);
+console.log("La suma del for es: ", sumaFor);
+
+/* Sumar Argumentos Indefinidos*/
+	
+function sumarArgIndefinidos(){
+
+var resultado = arguments[0];
+console.log(resultado);
+
+for (var i = 1; i < arguments.length; i++) {
+    console.log("Cantidad de argumentos ", arguments.length);
+    resultado = resultado + arguments[i];
+    
+}
+
+console.log("resultado es: ", resultado);
+return resultado;
+}
+
+sumarArgIndefinidos(10,20,30,11,22);
+sumarArgIndefinidos('A','B','C','D','E','F');
+
+</script>
+</body>
+</html> 
